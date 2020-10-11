@@ -3,17 +3,45 @@
 
 import React from 'react'
 
-function Counter({initialCount = 0, step = 1}) {
-  // 🐨 replace React.useState with React.useReducer.
-  // 💰 React.useReducer(countReducer, initialCount)
-  const [count, setCount] = React.useState(initialCount)
+/*
+  1,useState three difference ways:
+    -useState() //no initial value
+    -useState(initialValue) //a literal initial value
+    -useState(() => initialValue) //a lazy initial value
+  2,Can implement useState with useReducer:
+    const useState = initialCount => React.useReducer(countReducer, {count: initialCount}, initialCountReducer)
+    //render:
+    const [state, setState] = useState(initialCount)
+  3,initialCountReducer:
+    case read into localStorage or something else that we wouldn't want happening every re-render
+*/
 
-  // 💰 you can write the countReducer function so you don't have to make any
-  // changes to the next two lines of code! Remember:
-  // The 1st argument is called "state" - the current value of count
-  // The 2nd argument is called "newState" - the value passed to setCount
-  const increment = () => setCount(count + step)
-  return <button onClick={increment}>{count}</button>
+const countReducer = (prevState, newState) => typeof newState === 'function' ? newState(prevState) : newState
+const initialCountReducer = initialCount => typeof initialCount === 'function' ? initialCount() : initialCount
+
+//Extra Credit 4
+function traditionCountReducer(state, action) {
+  switch(action.type) {
+    case 'INCREMENT':
+      return {...state, count: state.count + action.step}
+    default: 
+      throw new Error(`Unhandled reducer with action: ${action.type}`)
+  }
+}
+
+function Counter({initialCount = 0, step = 1}) {
+  const [state, setState] = React.useReducer(countReducer, () => ({
+    count: initialCount
+  }), initialCountReducer)
+
+  //Extra Credit 4
+  // const [state, dispatch] = React.useReducer(traditionCountReducer, {
+  //   count: initialCount
+  // })
+
+  // const traditionIncrement = () => dispatch({type: 'INCREMENT', step})
+  const increment = () => setState(currentState => ({count: currentState.count + step}))
+  return <button onClick={increment}>{state.count}</button>
 }
 
 function App() {
