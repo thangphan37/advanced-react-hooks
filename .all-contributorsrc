@@ -256,6 +256,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Huuums",
+      "name": "Dennis Collon",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/9745322?v=4",
+      "profile": "https://github.com/Huuums",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "jrozbicki",
+      "name": "Jakub Różbicki",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/35103924?v=4",
+      "profile": "https://github.com/jrozbicki",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

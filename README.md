@@ -81,6 +81,14 @@ the problem is. If you can't work it out on your own then please [file an
 issue][issue] and provide _all_ the output from the commands you ran (even if
 it's a lot).
 
+If you can't get the setup script to work, then just make sure you have the
+right versions of the requirements listed above, and run the following commands:
+
+```
+npm install
+npm run validate
+```
+
 It's recommended you run everything locally in the same environment you work in
 every day, but if you're having issues getting things set up, you can also set
 this up using [GitHub Codespaces](https://github.com/features/codespaces)
@@ -191,6 +199,10 @@ Thanks goes to these wonderful people
     <td align="center"><a href="http://blog.rphuber.com"><img src="https://avatars0.githubusercontent.com/u/8245890?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Huber</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-hooks/commits?author=rphuber" title="Documentation">📖</a> <a href="https://github.com/kentcdodds/advanced-react-hooks/commits?author=rphuber" title="Code">💻</a></td>
     <td align="center"><a href="https://dominicchapman.com"><img src="https://avatars2.githubusercontent.com/u/7607007?v=4" width="100px;" alt=""/><br /><sub><b>Dominic Chapman</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-hooks/commits?author=dominicchapman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/imalbert"><img src="https://avatars1.githubusercontent.com/u/12537973?v=4" width="100px;" alt=""/><br /><sub><b>imalbert</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-hooks/commits?author=imalbert" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/Huuums"><img src="https://avatars1.githubusercontent.com/u/9745322?v=4" width="100px;" alt=""/><br /><sub><b>Dennis Collon</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-hooks/commits?author=Huuums" title="Documentation">📖</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/jrozbicki"><img src="https://avatars3.githubusercontent.com/u/35103924?v=4" width="100px;" alt=""/><br /><sub><b>Jakub Różbicki</b></sub></a><br /><a href="https://github.com/kentcdodds/advanced-react-hooks/commits?author=jrozbicki" title="Documentation">📖</a></td>
   </tr>
 </table>
 
