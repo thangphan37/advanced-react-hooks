@@ -3,10 +3,15 @@
 
 import React from 'react'
 
+/*
+  -useLayoutEffect: observable change to the DOM
+  -life cycle: https://github.com/donavon/hook-flow
+*/
 function MessagesDisplay({messages}) {
   const containerRef = React.useRef()
   // 🐨 replace useEffect with useLayoutEffect
-  React.useEffect(() => {
+  // React.useEffect(() => {
+  React.useLayoutEffect(() => {
     containerRef.current.scrollTop = containerRef.current.scrollHeight
   })
 
@@ -31,9 +36,11 @@ function sleep(time = 0) {
 function SlooooowSibling() {
   // try this with useLayoutEffect as well to see
   // how it impacts interactivity of the page before updates.
-  React.useEffect(() => {
+  // React.useEffect(() => {
+  React.useLayoutEffect(() => {
     // increase this number to see a more stark difference
-    sleep(300)
+    // sleep(300)
+    sleep(1300)
   })
   return null
 }
